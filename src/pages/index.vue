@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { MaisonRecord } from '@/types'
+import type { MaisonReponse } from '@/pocketbase-types'
 import MaisonCard from '@/components/MaisonCard.vue'
 
-const maisonsListe: MaisonRecord[] = [
+const maisonsListe: MaisonReponse[] = [
   {
     adresse: '15 Chemin des Tuilleries, 77100 Mareuil-lès-Meaux ',
     collectionId: 'ayzbr1vp5ahlfdh',
@@ -83,7 +83,7 @@ const maisonsListe: MaisonRecord[] = [
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
-  <MaisonCard -nom-maison="Maison" :prix="12*2"/>
-  <MaisonCard v-bind="maisonsListe[0]"/>
+  <MaisonCard -nom-maison="Maison" :prix="12 * 2" />
+  <MaisonCard v-bind="maisonsListe[0]" />
   <MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.nom" v-bind="uneMaison" />
 </template>
