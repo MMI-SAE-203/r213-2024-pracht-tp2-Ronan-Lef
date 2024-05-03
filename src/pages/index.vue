@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { MaisonRecord } from '@/types'
+import MaisonCard from '@/components/MaisonCard.vue'
 
 const maisonsListe: MaisonRecord[] = [
   {
@@ -82,4 +83,5 @@ const maisonsListe: MaisonRecord[] = [
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
+  <MaisonCard -nom-maison="Maison" :prix="12*2"/>
 </template>
