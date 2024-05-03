@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { MaisonsResponse } from '@/pocketbase-types'
-defineProps<MaisonsResponse>()
+import ImgPb from './ImgPb.vue'
+const props = defineProps<MaisonsResponse>()
 </script>
 
 <template>
@@ -15,9 +16,9 @@ defineProps<MaisonsResponse>()
   >
     <div class="self-stretch flex-grow-0 flex-shrink-0 h-[200px]">
       <div
-        class="w-[342px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
+        class="w-[342px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg"
       ></div>
-      <img src="" class="w-[342px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
+      <ImgPb :record="props" :filename="images" :width="387" :height="235" class="..." />
     </div>
     <div
       class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-5 py-[30px]"
