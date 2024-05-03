@@ -84,4 +84,5 @@ const maisonsListe: MaisonRecord[] = [
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
   <MaisonCard -nom-maison="Maison" :prix="12*2"/>
+  <MaisonCard v-bind="maisonsListe[0]"/>
 </template>
