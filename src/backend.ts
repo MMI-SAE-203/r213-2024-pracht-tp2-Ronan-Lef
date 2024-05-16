@@ -34,12 +34,13 @@ try {
 };
 
 /*Question 8. Ecrire le code permettant d’afficher toutes les maisons par ordre décroissant de leur date de création dans la base de données.*/
-try {
-  const sortedRecords = await pb.collection("Maisons").getFullList({ sort: "-created",
-   }) ;
-  console.table(sortedRecords);
-} catch (e) {
-  console.error(e);
+export async function allMaisonsSorted() {
+  try {
+    const allMaisonsSorted = await pb.collection('Maisons').getFullList({ sort: '-created' })
+    return allMaisonsSorted;
+  } catch (e) {
+    console.error(e)
+  }
 };
 
 /*Question 9. Ecrire le code permettant d’afficher toutes les maisons qui sont en favori.*/

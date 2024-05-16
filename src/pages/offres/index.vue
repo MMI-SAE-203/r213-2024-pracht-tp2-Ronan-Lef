@@ -2,16 +2,15 @@
 import { pb } from '@/backend';
 import MaisonCard from '@/components/MaisonCard.vue'
 
-const maisonsListe = await pb.collection('Maisons').getFullList({
-  filter: 'favori = true',
-})
-console.log(maisonsListe);
+
+import { allMaisonsSorted } from '@/backend'
+
+const maisonsListe = await allMaisonsSorted()
 </script>
 
 <template>
-  <h1 class="text-2xl">Toutes les offres</h1>
-  <!-- <MaisonCard v-for="uneMaison of maisonsListe" v-bind="uneMaison"/> -->
-  <ul>
-<li v-for="uneMaison of maisonsListe"><RouterLink> :to="{name:'/offres/[id]', params:{id:{uneMaison.id}}">{{ uneMaison.nomMaison }}</RouterLink></li>
-  </ul>
+  <h1 class="text-2xl">TOUTES LES OFFRES</h1>
+  <!-- <MaisonCard v-bind="maisonsListe[0]"></MaisonCard>
+  <MaisonCard v-bind="maisonsListe[1]"></MaisonCard> -->
+  <MaisonCard v-for="maison in maisonsListe" v-bind="maison" :key="MaisonCard.nomMaison"></MaisonCard>
 </template>

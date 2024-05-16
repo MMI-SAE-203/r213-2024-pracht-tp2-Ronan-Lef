@@ -9,9 +9,8 @@ const maisonsListe = await allMaisonsFavori()
 </script>
 
 <template>
-  <h1 class="text-2xl">Seulement celles en favoris</h1>
-  <MaisonCard -nom-maison="Maison" :prix="12*2"/>
-  <MaisonCard v-bind="maisonsListe[0]"/>
-  <MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.nom" v-bind="uneMaison" />
-  <MaisonCard v-for="uneMaison of maisonsListe" v-bind="uneMaison"/>
+  <h1 class="text-2xl">Bonjour monde !</h1>
+  <!-- <MaisonCard v-bind="maisonsListe[0]"></MaisonCard>
+  <MaisonCard v-bind="maisonsListe[1]"></MaisonCard> -->
+  <MaisonCard v-for="maison in maisonsListe" v-bind="maison" :key="MaisonCard.nomMaison"></MaisonCard>
 </template>
