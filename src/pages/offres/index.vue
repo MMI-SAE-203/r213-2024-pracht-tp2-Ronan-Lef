@@ -2,7 +2,7 @@
 import { pb } from '@/backend';
 import MaisonCard from '@/components/MaisonCard.vue'
 
-const maisonsListe = await pb.collection('maison').getFullList({
+const maisonsListe = await pb.collection('Maisons').getFullList({
   filter: 'favori = true',
 })
 console.log(maisonsListe);

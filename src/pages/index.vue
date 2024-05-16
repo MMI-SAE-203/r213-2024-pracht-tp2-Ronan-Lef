@@ -2,10 +2,10 @@
 import { pb } from '@/backend';
 import MaisonCard from '@/components/MaisonCard.vue'
 
-const maisonsListe = await pb.collection('Maisons').getFullList({
-  filter: 'favori = true',
-})
-console.log(maisonsListe);
+
+import { allMaisonsFavori } from '@/backend'
+
+const maisonsListe = await allMaisonsFavori()
 </script>
 
 <template>
