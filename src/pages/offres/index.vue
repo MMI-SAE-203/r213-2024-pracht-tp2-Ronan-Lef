@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { pb } from '@/backend';
-import MaisonCard from '@/components/MaisonCard.vue'
-
-
 import { allMaisonsSorted } from '@/backend'
 
 const maisonsListe = await allMaisonsSorted()
