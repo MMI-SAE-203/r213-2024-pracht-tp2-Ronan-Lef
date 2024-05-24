@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase'
 import { type TypedPocketBase } from './pocketbase-types.js'
 
-export const pb = new PocketBase(import.meta.env.VITE_URL_POCKETBASE) as TypedPocketBase
+export const pb = new PocketBase("http://r231.ronanlefour.fr:443") as TypedPocketBase
 
 /*Question 5. Ecrire le code permettant de r´ecup´erer la liste de toutes les donn´ees `a partir de la collection
 maison. N’oubliez pas de d´eclarer la variable pour stocker les donn´ees dedans avant l’affichage et de d´esactiver
