@@ -1,15 +1,15 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { pb } from '@/backend';
 
-import { oneIDagent } from '@/backend'
+import { pb } from '@/backend'
 
-const agentsListe = await allAgentsSorted()
+const agentsListe = await pb.collection('Agents').getFullList()
 </script>
 
 <template>
   <h1 class="text-2xl">TOUS LES AGENTS</h1>
   <ul>
-  <li v-for="unAgent in agentsListe" :v-key="unAgent.id">
+  <li v-for="unAgent in agentsListe" :key="unAgent.id">
     <RouterLink
       :to="{
         name: '/agents/[id]',

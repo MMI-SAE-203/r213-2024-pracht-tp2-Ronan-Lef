@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { MaisonsResponse } from '@/pocketbase-types'
 import ImgPb from './ImgPb.vue'
-const props = defineProps<MaisonsResponse>()
+const props = defineProps<MaisonsResponse<any>>()
 </script>
 
 <template>
