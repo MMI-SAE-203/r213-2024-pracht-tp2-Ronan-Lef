@@ -5,12 +5,12 @@ const props = defineProps<AgentsResponse>()
 <template>
     <article class="border border-teal-500 rounded-lg w-fit p-4 m-2">
         <div class="flex gap-1">
-            <h3>{{ prenom }}</h3>
-            <p>{{ nom }}</p>
+            <h3>{{ prenomAgent }}</h3>
+            <p>{{ nomAgent }}</p>
         </div>
         <div>
-            <p>{{ telephone }}</p>
-            <p>{{ email }}</p>
+            <p>{{ telephoneAgent }}</p>
+            <p>{{ emailAgent }}</p>
         </div>
     </article>
 </template>
